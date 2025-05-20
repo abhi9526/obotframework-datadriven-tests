@@ -19,14 +19,13 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: |
         pip install robotframework
-        pip install robotframework-requests
         pip install robotframework-seleniumlibrary
         pip install robotframework-datadriver
         pip install webdrivermanager
-        webdrivermanager chrome --linkpath /usr/local/bin
+        webdrivermanager firefox --linkpath /usr/local/bin
 
     - name: Run Robot Tests
       run: robot tests/smoke/
