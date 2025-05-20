@@ -32,7 +32,7 @@ jobs:
       run: robot tests/smoke/
 
     - name: Upload Robot Framework Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: robot-report
         path: |
